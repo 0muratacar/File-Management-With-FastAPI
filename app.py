@@ -24,6 +24,10 @@ def create_file_if_not_exists(directory):
             print("Error creating file:", e)
             return False
 
+@app.get("/hello/")
+async def hello():
+    return {"message": f"Hello World"}
+
 @app.post("/copy/")
 async def copy(file_name: str = Form(...),from_where: str = Form(...),to_where: str = Form(...)):
     try:
