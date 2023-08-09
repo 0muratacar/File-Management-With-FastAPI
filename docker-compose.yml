@@ -1,0 +1,7 @@
+version: '3'
+services: 
+    file-manager:
+        build: .
+        container_name: "file-manager-container"
+        ports: 
+            - "8000:8000"

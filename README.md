@@ -9,7 +9,7 @@ This application is a file management platform. Incoming requests to the APIs ha
 <hr>
 <br>
 
-## Installation
+## Installation and Run
 <br>
 
 1. Clone the repository:
@@ -21,14 +21,45 @@ This application is a file management platform. Incoming requests to the APIs ha
    ```bash
    cd fastapi-project
     ```
-3. Create a virtual environment (optional but recommended):
-   ```bash
-   python -m venv venv
-    ```
-4. Install dependencies from requirements.txt:
-   ```bash
-   pip install -r requirements.txt
-    ```
+    <br>
+
+    ### | WITH DOCKER
+
+    3. Create a virtual environment (optional but recommended):
+        ```bash
+        docker compose up --build
+        ```
+        Then app will run in 8000 port. You can change the port in docker files.
+    
+    <br>
+
+    ### | WITHOUT DOCKER
+
+    3. Go to the project directory:
+        ```bash
+        cd app
+        ```
+
+    4. Create a virtual environment (optional but recommended):
+        ```bash
+        python3 -m venv venv
+        ```
+
+    5. Install dependencies from requirements.txt:
+        ```bash
+        pip3 install -r requirements.txt
+        ```
+
+    6. Run the application
+
+        <br>
+        FastAPI projects are usually started using "uvicorn" from the terminal. In this project, the main function in the main.py file performs this operation. Therefore, you only need to write the following command in the terminal
+
+        <br>
+
+        ```bash
+        python3 main.py
+        ```
 
 <br>
 
@@ -45,21 +76,14 @@ This application is a file management platform. Incoming requests to the APIs ha
 
 ## Configuration
 <br>
-Edit the config.py file to configure your application settings.
+Edit the config.py file to configure your application settings for run without docker.
+You can change settings in docker files to run with docker.
 
 <br>
-
-## Running the Application
-<br>
-FastAPI projects are usually started using "uvicorn" from the terminal. In this project, the main function in the main.py file performs this operation. Therefore, you only need to write the following command in the terminal
-
-<br>
-
-```bash
-python main.py
-```
 
 <br>
 <hr><hr>
-THANKS
+
+<img src="readme.svg" width="800" height="400">
+
 <hr><hr>
